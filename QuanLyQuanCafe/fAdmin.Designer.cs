@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.USP_GetListBillByDateForReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.QuanLyQuanCafeDataSet2 = new QuanLyQuanCafe.QuanLyQuanCafeDataSet2();
             this.tpAccount = new System.Windows.Forms.TabPage();
@@ -64,6 +64,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.btnEditTable = new System.Windows.Forms.Button();
+            this.btnDeleteTable = new System.Windows.Forms.Button();
             this.btnAddTable = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.dtgvTable = new System.Windows.Forms.DataGridView();
@@ -121,7 +122,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.rpViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.USP_GetListBillByDateForReportTableAdapter = new QuanLyQuanCafe.QuanLyQuanCafeDataSet2TableAdapters.USP_GetListBillByDateForReportTableAdapter();
-            this.btnDeleteTable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.USP_GetListBillByDateForReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLyQuanCafeDataSet2)).BeginInit();
             this.tpAccount.SuspendLayout();
@@ -484,6 +484,17 @@
             this.btnEditTable.Text = "Sửa";
             this.btnEditTable.UseVisualStyleBackColor = true;
             this.btnEditTable.Click += new System.EventHandler(this.btnEditTable_Click);
+            // 
+            // btnDeleteTable
+            // 
+            this.btnDeleteTable.Enabled = false;
+            this.btnDeleteTable.Location = new System.Drawing.Point(165, 3);
+            this.btnDeleteTable.Name = "btnDeleteTable";
+            this.btnDeleteTable.Size = new System.Drawing.Size(75, 46);
+            this.btnDeleteTable.TabIndex = 1;
+            this.btnDeleteTable.Text = "Xóa";
+            this.btnDeleteTable.UseVisualStyleBackColor = true;
+            this.btnDeleteTable.Click += new System.EventHandler(this.btnDeleteTable_Click);
             // 
             // btnAddTable
             // 
@@ -1020,9 +1031,9 @@
             // 
             // rpViewer
             // 
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.USP_GetListBillByDateForReportBindingSource;
-            this.rpViewer.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.USP_GetListBillByDateForReportBindingSource;
+            this.rpViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.rpViewer.LocalReport.ReportEmbeddedResource = "QuanLyQuanCafe.Report2.rdlc";
             this.rpViewer.Location = new System.Drawing.Point(0, 0);
             this.rpViewer.Name = "rpViewer";
@@ -1032,16 +1043,6 @@
             // USP_GetListBillByDateForReportTableAdapter
             // 
             this.USP_GetListBillByDateForReportTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnDeleteTable
-            // 
-            this.btnDeleteTable.Location = new System.Drawing.Point(165, 3);
-            this.btnDeleteTable.Name = "btnDeleteTable";
-            this.btnDeleteTable.Size = new System.Drawing.Size(75, 46);
-            this.btnDeleteTable.TabIndex = 1;
-            this.btnDeleteTable.Text = "Xóa";
-            this.btnDeleteTable.UseVisualStyleBackColor = true;
-            this.btnDeleteTable.Click += new System.EventHandler(this.btnDeleteTable_Click);
             // 
             // fAdmin
             // 
